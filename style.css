@@ -1,0 +1,111 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f0f2f0, #e0e0e0);
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    background-image: url('https://images.unsplash.com/photo-1517245386804-bb43f63fb1ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+header h1 {
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+section {
+    padding: 30px;
+    margin: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section h2 {
+    font-family: 'Oswald', sans-serif;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.job {
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #e0e0e0;
+    transform: translateX(5px);
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Grid Layout */
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    padding: 30px;
+}
+
+header, footer {
+    grid-column: 1 / -1;
+}
+
+#profile, #experience {
+    grid-column: 1 / -1;
+}
+
+section {
+    padding: 20px;
+    margin: 0;
+}
+
+/* Basic responsiveness */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+section:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
