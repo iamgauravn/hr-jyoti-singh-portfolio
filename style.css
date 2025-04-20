@@ -83,7 +83,7 @@ header, footer {
     grid-column: 1 / -1;
 }
 
-#profile, #experience {
+#profile, #about-me, #experience {
     grid-column: 1 / -1;
 }
 
